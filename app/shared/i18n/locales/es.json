@@ -1,0 +1,33 @@
+{
+  "app": {
+    "name": "Training Program"
+  },
+  "common": {
+    "logout": "Cerrar sesión",
+    "changeLanguage": "Cambiar idioma"
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar sesión",
+      "subtitle": "Ingresa tus credenciales para continuar",
+      "username": "Usuario",
+      "password": "Contraseña",
+      "submit": "Entrar",
+      "errorTitle": "No se pudo iniciar sesión",
+      "tagline": "Mueve el cursor: el ciempiés te sigue",
+      "usernamePlaceholder": "Escribe tu usuario",
+      "passwordPlaceholder": "Escribe tu contraseña",
+      "showPassword": "Mostrar contraseña",
+      "hidePassword": "Ocultar contraseña"
+    },
+    "validation": {
+      "username": "Usuario requerido",
+      "password": "Contraseña requerida"
+    }
+  },
+  "home": {
+    "title": "Inicio",
+    "subtitle": "Esta es tu página principal de Training Program",
+    "welcome": "¡Bienvenido, {username}!"
+  }
+}

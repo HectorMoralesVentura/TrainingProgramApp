@@ -1,0 +1,33 @@
+{
+  "app": {
+    "name": "Training Program"
+  },
+  "common": {
+    "logout": "Log out",
+    "changeLanguage": "Change language"
+  },
+  "auth": {
+    "login": {
+      "title": "Log in",
+      "subtitle": "Enter your credentials to continue",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Sign in",
+      "errorTitle": "Could not sign in",
+      "tagline": "Move your cursor: the centipede follows you",
+      "usernamePlaceholder": "Enter your username",
+      "passwordPlaceholder": "Enter your password",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
+    },
+    "validation": {
+      "username": "Username is required",
+      "password": "Password is required"
+    }
+  },
+  "home": {
+    "title": "Home",
+    "subtitle": "This is your Training Program home page",
+    "welcome": "Welcome, {username}!"
+  }
+}

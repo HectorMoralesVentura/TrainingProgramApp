@@ -124,6 +124,27 @@
       "title": "Caution due to your condition",
       "limitedTo": "Limited to {level}",
       "maxLevel": "Maximum level for your condition: {level}"
+    },
+    "muscleMap": {
+      "label": "Muscles worked: {muscles}",
+      "empty": "Muscle map",
+      "names": {
+        "trapezius": "Trapezius",
+        "deltoids": "Deltoids",
+        "chest": "Chest",
+        "biceps": "Biceps",
+        "triceps": "Triceps",
+        "forearms": "Forearms",
+        "abs": "Abs",
+        "obliques": "Obliques",
+        "lats": "Lats",
+        "lower-back": "Lower back",
+        "glutes": "Glutes",
+        "quadriceps": "Quadriceps",
+        "adductors": "Adductors",
+        "hamstrings": "Hamstrings",
+        "calves": "Calves"
+      }
     }
   },
   "profile": {
@@ -295,6 +316,168 @@
     "errors": {
       "type": "Only JPG, PNG or WebP images are allowed.",
       "size": "The image is larger than {mb} MB."
+    }
+  },
+  "session": {
+    "time": {
+      "minutes": "{n} min",
+      "hoursMinutes": "{h} h {m} min"
+    },
+    "phase": {
+      "prepare": "Get ready",
+      "work": "Work",
+      "rest": "Rest",
+      "log": "Log your set"
+    },
+    "status": {
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "header": {
+      "running": "Training"
+    },
+    "cta": {
+      "title": "Train {zone} now",
+      "description": "{n} suggested exercises · about {time}. We guide you set by set with work and rest times.",
+      "start": "Start workout",
+      "multi": "Train several zones",
+      "runningTitle": "You have a workout in progress",
+      "runningDescription": "Continue where you left off.",
+      "continue": "Continue"
+    },
+    "zones": {
+      "title": "What do you want to train?",
+      "subtitle": "Pick up to {max} zones and we will suggest the exercises.",
+      "perZone": "Per zone",
+      "selected": "No zones selected | 1 zone selected | {n} zones selected",
+      "suggest": "See suggestion"
+    },
+    "plan": {
+      "title": "Your workout",
+      "subtitle": "Remove, reorder or change the level of each exercise, add more from any zone and start when you are ready.",
+      "exercises": "Exercises",
+      "estimatedTotal": "Estimated duration",
+      "empty": "Your plan is empty",
+      "addExercises": "Add exercises",
+      "start": "Start",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "remove": "Remove {name}",
+      "setsCount": "{n} sets",
+      "restBadge": "Rest {time}",
+      "workPerSet": "{time} work per set",
+      "estimated": "≈ {time}"
+    },
+    "add": {
+      "title": "Add exercises",
+      "description": "Pick a zone and add the exercises you want.",
+      "zone": "Zone",
+      "add": "Add",
+      "added": "Added",
+      "done": "Done"
+    },
+    "conflict": {
+      "title": "You already have a workout in progress",
+      "description": "You can continue it or cancel it to start this one.",
+      "cancelPrevious": "Cancel previous and start",
+      "continuePrevious": "Continue previous"
+    },
+    "player": {
+      "title": "Workout",
+      "paused": "Paused",
+      "setOf": "Set {current} of {total}",
+      "setsProgress": "{done} of {total} sets",
+      "repsTarget": "{n} reps",
+      "repsTargetTime": "{n} reps · ~{time}",
+      "logTitle": "Set {n}: how much did you do?",
+      "repsDone": "Reps done",
+      "secondsDone": "Seconds held",
+      "restTaken": "Rest before this set: {time}",
+      "saveSet": "Save set",
+      "setDone": "Set done",
+      "skipRest": "Skip rest",
+      "startNow": "Start now",
+      "addTime": "Add {n} seconds",
+      "pause": "Pause",
+      "resume": "Resume",
+      "skipExercise": "Skip exercise",
+      "mute": "Mute",
+      "unmute": "Unmute",
+      "end": "End workout",
+      "keepGoing": "Keep training"
+    },
+    "list": {
+      "title": "Workout exercises",
+      "description": "Switch exercise, fix sets or add more.",
+      "deleteSet": "Delete set {n}",
+      "doNow": "Do now",
+      "remove": "Remove"
+    },
+    "finish": {
+      "title": "End the workout?",
+      "description": "We save what you did and build your report.",
+      "doneTitle": "You completed every exercise!",
+      "doneDescription": "Finish to see your report.",
+      "submit": "Finish and see report",
+      "cancelWorkout": "Cancel workout",
+      "cancelConfirmTitle": "Cancel the workout?",
+      "cancelConfirmDescription": "No report will be created and the sets will be discarded.",
+      "cancelConfirm": "Yes, cancel"
+    },
+    "summary": {
+      "volume": "Volume",
+      "exercises": "Exercises",
+      "muscles": "Muscles worked",
+      "setsOf": "{done}/{total} sets"
+    },
+    "report": {
+      "title": "Workout report",
+      "loadError": "Could not load the report",
+      "duration": "Duration",
+      "vsEstimated": "Estimated {time}",
+      "completion": "Completed",
+      "setsReps": "{sets}/{planned} sets · {reps} reps",
+      "workVsRest": "Work vs rest",
+      "workShare": "{pct}% of the time working",
+      "byZone": "By zone",
+      "zoneStats": "{exercises} exercises · {sets} sets · {reps} reps",
+      "exercise": "Exercise",
+      "planned": "Planned",
+      "done": "Done",
+      "maxWeight": "Max weight",
+      "workRest": "Work / rest",
+      "reps": "{n} reps",
+      "suggested": "suggested {w}"
+    },
+    "stats": {
+      "sessions": "Workouts",
+      "time": "Total time",
+      "setsReps": "Sets / reps",
+      "zones": "Most trained zones",
+      "zoneLine": "{sessions} sessions · {sets} sets",
+      "topExercises": "Most done exercises",
+      "times": "{n}×"
+    },
+    "errors": {
+      "suggestTitle": "Could not build the suggestion",
+      "startTitle": "Could not start the workout",
+      "logSetTitle": "Could not save the set",
+      "deleteSetTitle": "Could not delete the set",
+      "addExerciseTitle": "Could not add the exercise",
+      "removeExerciseTitle": "Could not remove the exercise",
+      "finishTitle": "Could not finish the workout",
+      "cancelTitle": "Could not cancel the workout"
+    },
+    "toasts": {
+      "startedTitle": "Let’s train!",
+      "startedDescription": "We guide you set by set.",
+      "setDeletedTitle": "Set deleted",
+      "exerciseAddedTitle": "Exercise added",
+      "exerciseRemovedTitle": "Exercise removed",
+      "finishedTitle": "Workout finished",
+      "finishedDescription": "Here is your report.",
+      "cancelledTitle": "Workout cancelled"
     }
   }
 }

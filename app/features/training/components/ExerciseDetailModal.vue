@@ -3,6 +3,7 @@ import type { TabsItem } from '@nuxt/ui'
 import type { Exercise, ExerciseLevel } from '~/features/training/types/training.types'
 import MediaPlaceholder from '~/features/training/components/MediaPlaceholder.vue'
 import LevelSelector from '~/features/training/components/LevelSelector.vue'
+import MuscleMap from '~/features/training/components/MuscleMap.vue'
 
 const props = defineProps<{
   exercise: Exercise | null
@@ -35,6 +36,8 @@ const steps = computed(() =>
 
 const viewSpec = computed(() => (props.exercise ? levelSpec(props.exercise.levels, viewLevel.value) : null))
 
+const highlightedMuscles = computed(() => muscleIdsFromNames(props.exercise?.muscles ?? []))
+
 const hasWeight = computed(() => props.exercise?.levels.some(l => l.suggested_weight_kg != null) ?? false)
 const isHold = computed(() => props.exercise?.levels.every(l => l.reps == null && !l.to_failure) ?? false)
 
@@ -63,9 +66,16 @@ function register() {
         <UTabs :items="mediaTabs" default-value="gif" variant="link" class="w-full">
           <template #content="{ item }">
             <div class="rounded-lg overflow-hidden ring ring-default">
+              <!-- Sin ilustración subida: se dibuja el mapa muscular con los músculos del ejercicio -->
+              <div
+                v-if="item.value === 'illustration' && !exercise.media.illustration_url"
+                class="aspect-video flex items-center justify-center bg-elevated p-3"
+              >
+                <MuscleMap :highlighted="highlightedMuscles" class="h-full w-auto" />
+              </div>
               <!-- El video puede ser externo (YouTube/Vimeo) o archivo; se abre en otra pestaña -->
               <MediaPlaceholder
-                v-if="item.value !== 'video' || !exercise.media.video_url"
+                v-else-if="item.value !== 'video' || !exercise.media.video_url"
                 :icon="item.icon ?? 'i-lucide-image'"
                 :label="t('training.media.pending')"
                 :src="item.src"

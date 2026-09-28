@@ -2,6 +2,7 @@
 import type { Exercise, ExerciseLevel } from '~/features/training/types/training.types'
 import MediaPlaceholder from '~/features/training/components/MediaPlaceholder.vue'
 import ExerciseStats from '~/features/training/components/ExerciseStats.vue'
+import MuscleMap from '~/features/training/components/MuscleMap.vue'
 
 const props = defineProps<{
   exercise: Exercise
@@ -18,6 +19,11 @@ const effectiveLevel = computed(() => clampTrainingLevel(props.level, props.exer
 const isLimited = computed(() => effectiveLevel.value !== props.level)
 const spec = computed(() => levelSpec(props.exercise.levels, effectiveLevel.value))
 const levelMeta = computed(() => trainingLevelMeta(effectiveLevel.value))
+
+// Si la ilustración de Firebase no carga, se vuelve al mapa dibujado.
+const illustrationFailed = ref(false)
+const illustrationUrl = computed(() => (illustrationFailed.value ? null : props.exercise.media.illustration_url))
+const muscleLayout = computed(() => exerciseMuscleLayout(muscleIdsFromNames(props.exercise.muscles)))
 </script>
 
 <template>
@@ -25,12 +31,34 @@ const levelMeta = computed(() => trainingLevelMeta(effectiveLevel.value))
     class="h-full overflow-hidden flex flex-col transition-shadow duration-200 hover:shadow-lg"
     :ui="{ body: 'p-0 sm:p-0 flex-1 flex flex-col', footer: 'p-4 sm:px-4' }"
   >
-    <MediaPlaceholder
-      icon="i-lucide-image"
-      :label="t('training.media.thumbnail')"
-      :src="exercise.media.thumbnail_url"
-      :alt="exercise.name"
-    >
+    <!-- Portada real > ilustración de músculos (Firebase) > mapa dibujado > marcador vacío -->
+    <div class="relative aspect-video w-full overflow-hidden bg-elevated">
+      <!-- img nativo: Nuxt UI no tiene componente de imagen -->
+      <img
+        v-if="exercise.media.thumbnail_url"
+        :src="exercise.media.thumbnail_url"
+        :alt="exercise.name"
+        loading="lazy"
+        class="size-full object-cover"
+      >
+      <img
+        v-else-if="illustrationUrl"
+        :src="illustrationUrl"
+        :alt="exercise.name"
+        loading="lazy"
+        class="size-full object-contain p-3"
+        @error="illustrationFailed = true"
+      >
+      <div v-else-if="muscleLayout" class="size-full flex items-center justify-center p-3">
+        <MuscleMap
+          :highlighted="muscleLayout.muscles"
+          :view="muscleLayout.view"
+          :region="muscleLayout.region"
+          class="h-full w-auto max-w-full"
+        />
+      </div>
+      <MediaPlaceholder v-else icon="i-lucide-image" :label="t('training.media.thumbnail')" />
+
       <span class="absolute top-3 left-3 size-7 rounded-full bg-default/90 text-highlighted text-sm font-semibold flex items-center justify-center shadow-sm">
         {{ index }}
       </span>
@@ -41,7 +69,7 @@ const levelMeta = computed(() => trainingLevelMeta(effectiveLevel.value))
         :label="t(`training.levels.${effectiveLevel}`)"
         size="sm"
       />
-    </MediaPlaceholder>
+    </div>
 
     <div class="flex-1 flex flex-col gap-3 p-4">
       <div class="space-y-2">

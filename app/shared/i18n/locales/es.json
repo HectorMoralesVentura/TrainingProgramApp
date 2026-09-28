@@ -124,6 +124,27 @@
       "title": "Precaución por tu condición",
       "limitedTo": "Limitado a {level}",
       "maxLevel": "Nivel máximo por tu condición: {level}"
+    },
+    "muscleMap": {
+      "label": "Músculos trabajados: {muscles}",
+      "empty": "Mapa muscular",
+      "names": {
+        "trapezius": "Trapecio",
+        "deltoids": "Deltoides",
+        "chest": "Pectoral",
+        "biceps": "Bíceps",
+        "triceps": "Tríceps",
+        "forearms": "Antebrazos",
+        "abs": "Abdomen",
+        "obliques": "Oblicuos",
+        "lats": "Dorsales",
+        "lower-back": "Espalda baja",
+        "glutes": "Glúteos",
+        "quadriceps": "Cuádriceps",
+        "adductors": "Aductores",
+        "hamstrings": "Isquiotibiales",
+        "calves": "Pantorrillas"
+      }
     }
   },
   "profile": {
@@ -295,6 +316,168 @@
     "errors": {
       "type": "Solo se permiten imágenes JPG, PNG o WebP.",
       "size": "La imagen supera {mb} MB."
+    }
+  },
+  "session": {
+    "time": {
+      "minutes": "{n} min",
+      "hoursMinutes": "{h} h {m} min"
+    },
+    "phase": {
+      "prepare": "Prepárate",
+      "work": "Ejecución",
+      "rest": "Descanso",
+      "log": "Registra tu serie"
+    },
+    "status": {
+      "in_progress": "En curso",
+      "completed": "Terminado",
+      "cancelled": "Cancelado"
+    },
+    "header": {
+      "running": "Entrenando"
+    },
+    "cta": {
+      "title": "Entrena {zone} ahora",
+      "description": "{n} ejercicios sugeridos · unos {time}. Te guiamos serie por serie con tiempos de ejecución y descanso.",
+      "start": "Empezar entrenamiento",
+      "multi": "Entrenar varias zonas",
+      "runningTitle": "Tienes un entrenamiento en curso",
+      "runningDescription": "Continúa donde te quedaste.",
+      "continue": "Continuar"
+    },
+    "zones": {
+      "title": "¿Qué quieres entrenar?",
+      "subtitle": "Elige hasta {max} zonas y te sugerimos los ejercicios.",
+      "perZone": "Por zona",
+      "selected": "Ninguna zona elegida | 1 zona elegida | {n} zonas elegidas",
+      "suggest": "Ver sugerencia"
+    },
+    "plan": {
+      "title": "Tu entrenamiento",
+      "subtitle": "Quita, reordena o cambia el nivel de cada ejercicio, agrega más de cualquier zona y empieza cuando estés listo.",
+      "exercises": "Ejercicios",
+      "estimatedTotal": "Duración estimada",
+      "empty": "Tu plan está vacío",
+      "addExercises": "Agregar ejercicios",
+      "start": "Empezar",
+      "moveUp": "Subir",
+      "moveDown": "Bajar",
+      "remove": "Quitar {name}",
+      "setsCount": "{n} series",
+      "restBadge": "Descanso {time}",
+      "workPerSet": "Ejecución {time} por serie",
+      "estimated": "≈ {time}"
+    },
+    "add": {
+      "title": "Agregar ejercicios",
+      "description": "Elige una zona y agrega los ejercicios que quieras.",
+      "zone": "Zona",
+      "add": "Agregar",
+      "added": "Agregado",
+      "done": "Listo"
+    },
+    "conflict": {
+      "title": "Ya tienes un entrenamiento en curso",
+      "description": "Puedes continuarlo o cancelarlo para empezar este.",
+      "cancelPrevious": "Cancelar el anterior y empezar",
+      "continuePrevious": "Continuar el anterior"
+    },
+    "player": {
+      "title": "Entrenamiento",
+      "paused": "En pausa",
+      "setOf": "Serie {current} de {total}",
+      "setsProgress": "{done} de {total} series",
+      "repsTarget": "{n} reps",
+      "repsTargetTime": "{n} reps · ~{time}",
+      "logTitle": "Serie {n}: ¿cuánto hiciste?",
+      "repsDone": "Reps hechas",
+      "secondsDone": "Segundos sostenidos",
+      "restTaken": "Descanso antes de esta serie: {time}",
+      "saveSet": "Guardar serie",
+      "setDone": "Serie hecha",
+      "skipRest": "Saltar descanso",
+      "startNow": "Empezar ya",
+      "addTime": "Agregar {n} segundos",
+      "pause": "Pausar",
+      "resume": "Reanudar",
+      "skipExercise": "Saltar ejercicio",
+      "mute": "Silenciar",
+      "unmute": "Activar sonido",
+      "end": "Terminar entrenamiento",
+      "keepGoing": "Seguir entrenando"
+    },
+    "list": {
+      "title": "Ejercicios del entrenamiento",
+      "description": "Cambia de ejercicio, corrige series o agrega más.",
+      "deleteSet": "Borrar serie {n}",
+      "doNow": "Hacer ahora",
+      "remove": "Quitar"
+    },
+    "finish": {
+      "title": "¿Terminar el entrenamiento?",
+      "description": "Guardamos lo que llevas y generamos tu reporte.",
+      "doneTitle": "¡Completaste todos los ejercicios!",
+      "doneDescription": "Termina para ver tu reporte.",
+      "submit": "Terminar y ver reporte",
+      "cancelWorkout": "Cancelar entrenamiento",
+      "cancelConfirmTitle": "¿Cancelar el entrenamiento?",
+      "cancelConfirmDescription": "No se generará reporte y las series quedarán descartadas.",
+      "cancelConfirm": "Sí, cancelar"
+    },
+    "summary": {
+      "volume": "Volumen",
+      "exercises": "Ejercicios",
+      "muscles": "Músculos trabajados",
+      "setsOf": "{done}/{total} series"
+    },
+    "report": {
+      "title": "Reporte del entrenamiento",
+      "loadError": "No se pudo cargar el reporte",
+      "duration": "Duración",
+      "vsEstimated": "Estimada {time}",
+      "completion": "Completado",
+      "setsReps": "{sets}/{planned} series · {reps} reps",
+      "workVsRest": "Ejecución vs descanso",
+      "workShare": "{pct} % del tiempo en ejecución",
+      "byZone": "Por zona",
+      "zoneStats": "{exercises} ejercicios · {sets} series · {reps} reps",
+      "exercise": "Ejercicio",
+      "planned": "Planeado",
+      "done": "Hecho",
+      "maxWeight": "Peso máx.",
+      "workRest": "Ejec. / desc.",
+      "reps": "{n} reps",
+      "suggested": "sugerido {w}"
+    },
+    "stats": {
+      "sessions": "Entrenamientos",
+      "time": "Tiempo total",
+      "setsReps": "Series / reps",
+      "zones": "Zonas más trabajadas",
+      "zoneLine": "{sessions} sesiones · {sets} series",
+      "topExercises": "Ejercicios más hechos",
+      "times": "{n}×"
+    },
+    "errors": {
+      "suggestTitle": "No se pudo generar la sugerencia",
+      "startTitle": "No se pudo iniciar el entrenamiento",
+      "logSetTitle": "No se pudo guardar la serie",
+      "deleteSetTitle": "No se pudo borrar la serie",
+      "addExerciseTitle": "No se pudo agregar el ejercicio",
+      "removeExerciseTitle": "No se pudo quitar el ejercicio",
+      "finishTitle": "No se pudo terminar el entrenamiento",
+      "cancelTitle": "No se pudo cancelar el entrenamiento"
+    },
+    "toasts": {
+      "startedTitle": "¡A entrenar!",
+      "startedDescription": "Te guiamos serie por serie.",
+      "setDeletedTitle": "Serie borrada",
+      "exerciseAddedTitle": "Ejercicio agregado",
+      "exerciseRemovedTitle": "Ejercicio quitado",
+      "finishedTitle": "Entrenamiento terminado",
+      "finishedDescription": "Aquí está tu reporte.",
+      "cancelledTitle": "Entrenamiento cancelado"
     }
   }
 }

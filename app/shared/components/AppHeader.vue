@@ -7,6 +7,9 @@ const { username, photoUrl, logout } = useAuth()
 // Refresca la URL firmada de la foto de perfil (caduca).
 useMe()
 
+const { data: currentWorkout } = useCurrentWorkout()
+const sessionRunning = computed(() => !!currentWorkout.value)
+
 const nextLocale = computed(() => (locale.value === 'es' ? 'en' : 'es'))
 
 const nav = computed(() => [
@@ -53,6 +56,17 @@ const userMenu = computed<DropdownMenuItem[][]>(() => [
     </div>
 
     <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+      <!-- Acceso rápido de vuelta a un entrenamiento en curso -->
+      <UButton
+        v-if="sessionRunning"
+        to="/training/session"
+        size="sm"
+        icon="i-lucide-activity"
+        class="motion-safe:animate-pulse"
+        :aria-label="t('session.header.running')"
+      >
+        <span class="hidden sm:inline">{{ t('session.header.running') }}</span>
+      </UButton>
       <UColorModeButton />
       <UDropdownMenu :items="userMenu" :content="{ align: 'end' }">
         <UButton color="neutral" variant="ghost" :aria-label="t('common.userMenu')" class="gap-2">

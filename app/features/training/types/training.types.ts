@@ -17,6 +17,8 @@ export interface FocusZone {
   name: string
   /** Ya viene topado a 6 (lo que el usuario verá). */
   exercise_count: number
+  /** Imagen de la zona en Firebase Storage (FocusZone.illustration_image); null si aún no se sube. */
+  illustration_url?: string | null
 }
 
 export interface ExerciseLevelSpec {
@@ -27,6 +29,8 @@ export interface ExerciseLevelSpec {
   rest_seconds: number
   duration_seconds: number | null
   to_failure: boolean
+  /** Segundos de ejecución por repetición (tempo). Opcional hasta que el backend lo exponga. */
+  rep_seconds?: number
   /** null = peso corporal o el usuario no ha registrado medidas. */
   suggested_weight_kg: number | null
 }

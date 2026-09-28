@@ -1,0 +1,836 @@
+[
+ {
+  "slug": "ab-wheel-rollout",
+  "muscles": [
+   "shoulders",
+   "lats",
+   "abs",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "air-squat",
+  "muscles": [
+   "quads",
+   "glutes"
+  ]
+ },
+ {
+  "slug": "alternating-dumbbell-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "arnold-press",
+  "muscles": [
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "back-extension",
+  "muscles": [
+   "hamstrings",
+   "glutes",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "band-assisted-pull-up",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats"
+  ]
+ },
+ {
+  "slug": "barbell-21s",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "barbell-back-squat",
+  "muscles": [
+   "quads",
+   "hamstrings",
+   "glutes",
+   "abs",
+   "lower-back",
+   "adductors"
+  ]
+ },
+ {
+  "slug": "barbell-bench-press",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "barbell-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "barbell-front-squat",
+  "muscles": [
+   "traps",
+   "quads",
+   "hamstrings",
+   "glutes",
+   "abs"
+  ]
+ },
+ {
+  "slug": "barbell-good-morning",
+  "muscles": [
+   "hamstrings",
+   "glutes",
+   "abs",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "barbell-hip-thrust",
+  "muscles": [
+   "quads",
+   "hamstrings",
+   "glutes",
+   "abs",
+   "adductors"
+  ]
+ },
+ {
+  "slug": "barbell-overhead-press",
+  "muscles": [
+   "triceps",
+   "shoulders",
+   "traps",
+   "abs"
+  ]
+ },
+ {
+  "slug": "barbell-romanian-deadlift",
+  "muscles": [
+   "forearm",
+   "traps",
+   "hamstrings",
+   "glutes",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "barbell-row",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats",
+   "traps",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "barbell-shrug",
+  "muscles": [
+   "forearm",
+   "traps"
+  ]
+ },
+ {
+  "slug": "barbell-upright-row",
+  "muscles": [
+   "biceps",
+   "shoulders",
+   "traps"
+  ]
+ },
+ {
+  "slug": "bench-dip",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "boat-pose",
+  "muscles": [
+   "abs"
+  ]
+ },
+ {
+  "slug": "box-jump",
+  "muscles": [
+   "quads",
+   "glutes",
+   "calves"
+  ]
+ },
+ {
+  "slug": "burpee",
+  "muscles": [
+   "full-body"
+  ]
+ },
+ {
+  "slug": "cable-bar-triceps-pushdown",
+  "muscles": [
+   "triceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "cable-crossover",
+  "muscles": [
+   "chest",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "cable-crunch",
+  "muscles": [
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "cable-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "cable-face-pull",
+  "muscles": [
+   "shoulders",
+   "lats",
+   "traps"
+  ]
+ },
+ {
+  "slug": "cable-glute-kickback",
+  "muscles": [
+   "hamstrings",
+   "glutes",
+   "abs"
+  ]
+ },
+ {
+  "slug": "cable-lateral-raise",
+  "muscles": [
+   "shoulders",
+   "traps"
+  ]
+ },
+ {
+  "slug": "cable-overhead-triceps-extension",
+  "muscles": [
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "cable-pallof-press",
+  "muscles": [
+   "shoulders",
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "cable-rope-triceps-pushdown",
+  "muscles": [
+   "triceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "cable-woodchopper",
+  "muscles": [
+   "shoulders",
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "chair-pose",
+  "muscles": [
+   "quads",
+   "glutes"
+  ]
+ },
+ {
+  "slug": "chaturanga",
+  "muscles": [
+   "chest",
+   "triceps"
+  ]
+ },
+ {
+  "slug": "clean-and-jerk",
+  "muscles": [
+   "full-body"
+  ]
+ },
+ {
+  "slug": "close-grip-bench-press",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "close-grip-lat-pulldown",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats"
+  ]
+ },
+ {
+  "slug": "cobra",
+  "muscles": [
+   "chest",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "conventional-deadlift",
+  "muscles": [
+   "forearm",
+   "traps",
+   "quads",
+   "hamstrings",
+   "glutes",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "crow-pose",
+  "muscles": [
+   "forearm",
+   "abs"
+  ]
+ },
+ {
+  "slug": "crunch",
+  "muscles": [
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "dead-bug",
+  "muscles": [
+   "abs",
+   "obliques",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "decline-barbell-bench-press",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "decline-push-up",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders",
+   "abs"
+  ]
+ },
+ {
+  "slug": "diamond-push-up",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders",
+   "abs"
+  ]
+ },
+ {
+  "slug": "downward-dog",
+  "muscles": [
+   "shoulders",
+   "hamstrings"
+  ]
+ },
+ {
+  "slug": "dumbbell-bench-press",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "dumbbell-bulgarian-split-squat",
+  "muscles": [
+   "quads",
+   "hamstrings",
+   "glutes",
+   "adductors"
+  ]
+ },
+ {
+  "slug": "dumbbell-concentration-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "dumbbell-fly",
+  "muscles": [
+   "chest",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "dumbbell-front-raise",
+  "muscles": [
+   "chest",
+   "shoulders",
+   "traps"
+  ]
+ },
+ {
+  "slug": "dumbbell-hammer-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "dumbbell-lateral-raise",
+  "muscles": [
+   "shoulders",
+   "traps"
+  ]
+ },
+ {
+  "slug": "dumbbell-lunge",
+  "muscles": [
+   "quads",
+   "hamstrings",
+   "glutes",
+   "calves",
+   "adductors"
+  ]
+ },
+ {
+  "slug": "dumbbell-overhead-triceps-extension",
+  "muscles": [
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "dumbbell-pullover",
+  "muscles": [
+   "chest",
+   "triceps",
+   "lats",
+   "abs"
+  ]
+ },
+ {
+  "slug": "dumbbell-rear-delt-fly",
+  "muscles": [
+   "shoulders",
+   "lats",
+   "traps"
+  ]
+ },
+ {
+  "slug": "dumbbell-shoulder-press",
+  "muscles": [
+   "triceps",
+   "shoulders",
+   "traps"
+  ]
+ },
+ {
+  "slug": "dumbbell-triceps-kickback",
+  "muscles": [
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "ez-bar-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "ez-bar-preacher-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "ez-bar-skull-crusher",
+  "muscles": [
+   "triceps"
+  ]
+ },
+ {
+  "slug": "forearm-plank",
+  "muscles": [
+   "shoulders",
+   "abs",
+   "obliques",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "glute-bridge",
+  "muscles": [
+   "hamstrings",
+   "glutes",
+   "abs",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "handstand-push-up",
+  "muscles": [
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "hanging-leg-raise",
+  "muscles": [
+   "forearm",
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "hollow-hold",
+  "muscles": [
+   "abs"
+  ]
+ },
+ {
+  "slug": "incline-barbell-bench-press",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "incline-dumbbell-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "incline-dumbbell-press",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "inverted-row",
+  "muscles": [
+   "biceps",
+   "lats",
+   "traps",
+   "abs"
+  ]
+ },
+ {
+  "slug": "kettlebell-swing",
+  "muscles": [
+   "shoulders",
+   "hamstrings",
+   "glutes"
+  ]
+ },
+ {
+  "slug": "kipping-pull-up",
+  "muscles": [
+   "biceps",
+   "lats"
+  ]
+ },
+ {
+  "slug": "lat-pulldown",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats"
+  ]
+ },
+ {
+  "slug": "leg-press",
+  "muscles": [
+   "quads",
+   "hamstrings",
+   "glutes",
+   "adductors"
+  ]
+ },
+ {
+  "slug": "leg-press-calf-raise",
+  "muscles": [
+   "calves"
+  ]
+ },
+ {
+  "slug": "lying-leg-curl",
+  "muscles": [
+   "hamstrings",
+   "glutes",
+   "calves"
+  ]
+ },
+ {
+  "slug": "lying-leg-raise",
+  "muscles": [
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "machine-biceps-curl",
+  "muscles": [
+   "biceps",
+   "forearm"
+  ]
+ },
+ {
+  "slug": "machine-chest-fly",
+  "muscles": [
+   "chest",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "machine-chest-press",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "machine-crunch",
+  "muscles": [
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "machine-leg-extension",
+  "muscles": [
+   "quads"
+  ]
+ },
+ {
+  "slug": "machine-shoulder-press",
+  "muscles": [
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "medicine-ball-russian-twist",
+  "muscles": [
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "one-arm-dumbbell-row",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats",
+   "traps"
+  ]
+ },
+ {
+  "slug": "parallel-bar-dip",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "pike-push-up",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders",
+   "abs"
+  ]
+ },
+ {
+  "slug": "pistol-squat",
+  "muscles": [
+   "quads",
+   "glutes"
+  ]
+ },
+ {
+  "slug": "plank",
+  "muscles": [
+   "shoulders",
+   "abs"
+  ]
+ },
+ {
+  "slug": "pull-up",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats",
+   "abs"
+  ]
+ },
+ {
+  "slug": "push-up",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders",
+   "abs"
+  ]
+ },
+ {
+  "slug": "reverse-machine-fly",
+  "muscles": [
+   "shoulders",
+   "lats",
+   "traps"
+  ]
+ },
+ {
+  "slug": "rope-climb",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats"
+  ]
+ },
+ {
+  "slug": "row-sprint",
+  "muscles": [
+   "full-body"
+  ]
+ },
+ {
+  "slug": "seated-cable-row",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats",
+   "traps"
+  ]
+ },
+ {
+  "slug": "seated-machine-calf-raise",
+  "muscles": [
+   "calves"
+  ]
+ },
+ {
+  "slug": "side-plank",
+  "muscles": [
+   "shoulders",
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "standing-machine-calf-raise",
+  "muscles": [
+   "calves"
+  ]
+ },
+ {
+  "slug": "svend-press",
+  "muscles": [
+   "chest",
+   "triceps",
+   "shoulders"
+  ]
+ },
+ {
+  "slug": "t-bar-row",
+  "muscles": [
+   "biceps",
+   "forearm",
+   "lats",
+   "traps",
+   "lower-back"
+  ]
+ },
+ {
+  "slug": "thruster",
+  "muscles": [
+   "shoulders",
+   "quads"
+  ]
+ },
+ {
+  "slug": "toes-to-bar",
+  "muscles": [
+   "abs",
+   "obliques"
+  ]
+ },
+ {
+  "slug": "tree-pose",
+  "muscles": [
+   "glutes",
+   "calves"
+  ]
+ },
+ {
+  "slug": "walking-lunge",
+  "muscles": [
+   "quads",
+   "glutes"
+  ]
+ },
+ {
+  "slug": "wall-ball",
+  "muscles": [
+   "shoulders",
+   "quads"
+  ]
+ },
+ {
+  "slug": "warrior-2",
+  "muscles": [
+   "quads",
+   "glutes"
+  ]
+ }
+]

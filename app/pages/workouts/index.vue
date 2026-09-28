@@ -2,6 +2,7 @@
 import type { WorkoutFilters } from '~/features/progress/types/progress.types'
 import { API_PAGE_SIZE } from '~/shared/types/api.types'
 import WorkoutCard from '~/features/progress/components/WorkoutCard.vue'
+import WorkoutSummaryPanel from '~/features/workout-session/components/WorkoutSummaryPanel.vue'
 
 definePageMeta({ middleware: 'auth' })
 
@@ -17,6 +18,7 @@ watch(() => [filters.discipline, filters.date_from, filters.date_to], () => {
 })
 
 const { data, isPending, isError, errorMessage, isPlaceholderData } = useWorkouts(() => ({ ...filters }))
+const summaryFilters = computed(() => ({ discipline: filters.discipline, date_from: filters.date_from, date_to: filters.date_to }))
 
 const ALL = 'all'
 const disciplineItems = computed(() => [
@@ -80,6 +82,9 @@ useSeoMeta({
       />
     </div>
 
+    <!-- Resumen de los entrenamientos terminados con los mismos filtros -->
+    <WorkoutSummaryPanel :filters="summaryFilters" />
+
     <UAlert
       v-if="isError"
       color="error"
@@ -105,13 +110,19 @@ useSeoMeta({
 
     <template v-else>
       <div class="grid gap-4 lg:grid-cols-2 transition-opacity" :class="isPlaceholderData && 'opacity-60'">
-        <WorkoutCard
+        <!-- Cada entrenamiento abre su reporte -->
+        <ULink
           v-for="workout in data.results"
           :key="workout.id"
-          :workout="workout"
-          :discipline-name="disciplineOf(workout.discipline)?.name ?? workout.discipline"
-          :discipline-icon="disciplineOf(workout.discipline)?.icon ?? 'i-lucide-dumbbell'"
-        />
+          :to="`/workouts/${workout.id}`"
+          class="block rounded-xl transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        >
+          <WorkoutCard
+            :workout="workout"
+            :discipline-name="disciplineOf(workout.discipline)?.name ?? workout.discipline"
+            :discipline-icon="disciplineOf(workout.discipline)?.icon ?? 'i-lucide-dumbbell'"
+          />
+        </ULink>
       </div>
       <div v-if="data.count > API_PAGE_SIZE" class="flex justify-center">
         <UPagination v-model:page="filters.page" :total="data.count" :items-per-page="API_PAGE_SIZE" />

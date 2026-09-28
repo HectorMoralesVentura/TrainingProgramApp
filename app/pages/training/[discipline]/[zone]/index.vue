@@ -48,6 +48,17 @@ function openLog(exercise: Exercise, viewLevel: ExerciseLevel) {
   logOpen.value = true
 }
 
+// Entrenamiento guiado: abre el selector de zonas con esta ya marcada (se pueden sumar más).
+const { data: currentWorkout } = useCurrentWorkout()
+const sessionRunning = computed(() => !!currentWorkout.value)
+const suggestedSeconds = computed(() =>
+  planDurationSeconds((exercises.value ?? []).map(e => plannedFromCatalog(e, zoneSlug.value, level.value))),
+)
+
+function startTraining() {
+  navigateTo({ path: '/training/session/new', query: { discipline: disciplineSlug.value, zones: zoneSlug.value } })
+}
+
 useSeoMeta({
   title: () => zone.value?.name ?? t('training.steps.exercises'),
 })
@@ -84,6 +95,32 @@ useSeoMeta({
         <div class="sticky top-0 z-10 -mx-4 px-4 py-2 bg-default/85 backdrop-blur sm:static sm:mx-0 sm:px-0 sm:py-0 sm:bg-transparent sm:backdrop-blur-none">
           <LevelSelector v-model="level" />
         </div>
+      </div>
+
+      <!-- Empezar un entrenamiento guiado con los ejercicios sugeridos de esta zona -->
+      <div
+        v-if="exercises?.length"
+        class="rounded-xl bg-primary/10 ring ring-primary/25 p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4"
+      >
+        <div class="size-11 shrink-0 rounded-full bg-primary text-inverted hidden sm:flex items-center justify-center">
+          <UIcon name="i-lucide-play" class="size-5" />
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-highlighted">
+            {{ sessionRunning ? t('session.cta.runningTitle') : t('session.cta.title', { zone: zone?.name ?? '' }) }}
+          </p>
+          <p class="text-sm text-muted">
+            {{ sessionRunning ? t('session.cta.runningDescription') : t('session.cta.description', { n: exercises.length, time: formatDuration(suggestedSeconds, t) }) }}
+          </p>
+        </div>
+        <UButton
+          v-if="sessionRunning"
+          size="lg"
+          icon="i-lucide-play"
+          :label="t('session.cta.continue')"
+          to="/training/session"
+        />
+        <UButton v-else size="lg" icon="i-lucide-play" :label="t('session.cta.start')" @click="startTraining" />
       </div>
 
       <UAlert

@@ -42,7 +42,7 @@ useSeoMeta({
           <UIcon :name="discipline.icon" class="size-6 sm:size-7" />
         </div>
         <USkeleton v-else class="size-12 sm:size-14 rounded-2xl" />
-        <div class="space-y-1 min-w-0">
+        <div class="space-y-1 min-w-0 flex-1">
           <h1 class="text-2xl sm:text-3xl font-bold text-highlighted">
             {{ t('training.zone.title') }}
           </h1>
@@ -50,7 +50,21 @@ useSeoMeta({
             {{ t('training.zone.subtitle', { discipline: discipline?.name ?? '' }) }}
           </p>
         </div>
+        <!-- Entrenamiento guiado combinando varias zonas -->
+        <UButton
+          class="hidden sm:inline-flex shrink-0"
+          icon="i-lucide-play"
+          :label="t('session.cta.multi')"
+          :to="{ path: '/training/session/new', query: { discipline: disciplineSlug } }"
+        />
       </div>
+      <UButton
+        class="sm:hidden"
+        block
+        icon="i-lucide-play"
+        :label="t('session.cta.multi')"
+        :to="{ path: '/training/session/new', query: { discipline: disciplineSlug } }"
+      />
 
       <UAlert
         v-if="isError"

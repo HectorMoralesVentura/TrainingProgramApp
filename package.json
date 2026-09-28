@@ -16,6 +16,7 @@
     "@nuxtjs/i18n": "^10.4.0",
     "@tanstack/vue-query": "^5.101.2",
     "@vueuse/nuxt": "^14.3.0",
+    "firebase": "^12.19.0",
     "nuxt": "^4.4.8",
     "tailwindcss": "^4.3.2",
     "vue": "^3.5.38",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.116",
+    "@iconify-json/simple-icons": "^1.2.97",
     "@types/node": "^26.1.0"
   }
 }

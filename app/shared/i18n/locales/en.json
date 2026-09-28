@@ -4,7 +4,16 @@
   },
   "common": {
     "logout": "Log out",
-    "changeLanguage": "Change language"
+    "changeLanguage": "Change language",
+    "close": "Close",
+    "optional": "Optional",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "search": "Search...",
+    "mainNav": "Main navigation",
+    "userMenu": "User menu",
+    "changeLanguageTo": "Switch to {language}"
   },
   "auth": {
     "login": {
@@ -18,16 +27,274 @@
       "usernamePlaceholder": "Enter your username",
       "passwordPlaceholder": "Enter your password",
       "showPassword": "Show password",
-      "hidePassword": "Hide password"
+      "hidePassword": "Hide password",
+      "or": "or",
+      "google": "Continue with Google"
     },
     "validation": {
       "username": "Username is required",
       "password": "Password is required"
+    },
+    "google": {
+      "errors": {
+        "popupBlocked": "Your browser blocked the Google window. Allow pop-ups and try again.",
+        "network": "Could not reach Google. Check your internet connection.",
+        "accountExists": "An account with this email already exists with a different sign-in method.",
+        "unauthorizedDomain": "This domain is not authorized in Firebase (Authentication > Settings > Authorized domains).",
+        "notEnabled": "Google sign-in is not enabled in Firebase.",
+        "generic": "Could not sign in with Google. Please try again."
+      }
     }
   },
   "home": {
     "title": "Home",
     "subtitle": "This is your Training Program home page",
     "welcome": "Welcome, {username}!"
+  },
+  "training": {
+    "nav": "Train",
+    "back": "Back",
+    "stepOf": "Step {current} of {total}",
+    "loadError": "Could not load the information",
+    "home": {
+      "cta": "Start training"
+    },
+    "steps": {
+      "discipline": "Sport",
+      "zone": "Muscle zone",
+      "exercises": "Exercises"
+    },
+    "discipline": {
+      "title": "What do you want to train today?",
+      "subtitle": "Choose a discipline to get started.",
+      "zones": "No zones | 1 zone | {n} zones"
+    },
+    "zone": {
+      "title": "Choose the muscle zone",
+      "subtitle": "{discipline}: pick the part of the body you want to work on.",
+      "exercises": "No exercises | 1 exercise | {n} exercises"
+    },
+    "exercises": {
+      "subtitle": "No suggested exercises | We suggest 1 exercise for your level. | We suggest {n} exercises for your level.",
+      "subtitleLoading": "Preparing your exercises..."
+    },
+    "level": {
+      "label": "Your level"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "master": "Master",
+      "legend": "Legend"
+    },
+    "exercise": {
+      "bodyweight": "Bodyweight",
+      "sets": "Sets",
+      "reps": "Reps",
+      "hold": "Hold",
+      "rest": "Rest",
+      "suggestedWeight": "Suggested weight",
+      "suggestedWeightHint": "Log your bodyweight to calculate the suggested weight.",
+      "viewDetail": "View details",
+      "muscles": "Muscles worked",
+      "byLevel": "Sets and reps by level",
+      "toFailureShort": "Failure",
+      "toFailureHint": "“Failure” means repeating until you cannot complete another rep with good form.",
+      "weight": "Weight",
+      "registerWeight": "Log your weight",
+      "instructions": "Instructions"
+    },
+    "media": {
+      "thumbnail": "Cover",
+      "gif": "Execution",
+      "video": "Video",
+      "illustration": "Muscles",
+      "pending": "Visual content coming soon",
+      "watchVideo": "Watch video"
+    },
+    "empty": {
+      "zones": "This discipline has no zones yet",
+      "exercises": "This zone has no exercises yet"
+    },
+    "notFound": {
+      "discipline": "We could not find this discipline",
+      "zone": "We could not find this muscle zone"
+    },
+    "restriction": {
+      "title": "Caution due to your condition",
+      "limitedTo": "Limited to {level}",
+      "maxLevel": "Maximum level for your condition: {level}"
+    }
+  },
+  "profile": {
+    "nav": "My profile",
+    "title": "My profile",
+    "subtitle": "Your measurements and conditions adjust your exercises and suggested weight.",
+    "tabs": {
+      "measurements": "Measurements",
+      "health": "Health",
+      "photos": "Photos"
+    },
+    "photo": {
+      "change": "Change photo",
+      "remove": "Remove photo",
+      "uploadedTitle": "Photo updated",
+      "uploadedDescription": "Your new profile photo is now visible.",
+      "uploadErrorTitle": "Could not upload the photo",
+      "deletedTitle": "Photo removed",
+      "deletedDescription": "Your profile photo was removed.",
+      "deleteErrorTitle": "Could not remove the photo"
+    }
+  },
+  "progress": {
+    "levels": {
+      "savedTitle": "Level updated",
+      "savedDescription": "We recalculated your exercises and suggested weight.",
+      "errorTitle": "Could not update your level"
+    },
+    "measurements": {
+      "createdTitle": "Measurement saved",
+      "updatedTitle": "Measurement updated",
+      "savedDescription": "Your suggested weight was recalculated with this measurement.",
+      "errorTitle": "Could not save the measurement",
+      "weight": "Weight",
+      "date": "Date",
+      "dateHelp": "One measurement per day: if it exists, it gets updated.",
+      "height": "Height",
+      "bodyFat": "Body fat (%)",
+      "bodyMeasures": "Body circumferences",
+      "notes": "Notes",
+      "fields": {
+        "chest_cm": "Chest",
+        "waist_cm": "Waist",
+        "hip_cm": "Hip",
+        "arm_cm": "Arm",
+        "thigh_cm": "Thigh"
+      },
+      "lastUpdate": "Latest measurement",
+      "loadError": "Could not load your measurement history",
+      "empty": "No measurements yet",
+      "emptyDescription": "Log your weight so we can calculate the suggested weight for each exercise.",
+      "formTitle": "Log measurement",
+      "formDescription": "Only weight is required.",
+      "historyTitle": "History",
+      "validation": {
+        "positive": "Must be greater than 0",
+        "weightRequired": "Weight is required",
+        "weightRange": "Weight must be between 20 and 400 kg",
+        "date": "Invalid date",
+        "futureDate": "The date cannot be in the future",
+        "bodyFat": "Must be between 1 and 75 %"
+      }
+    },
+    "workouts": {
+      "nav": "History",
+      "title": "My workouts",
+      "subtitle": "Everything you have logged.",
+      "count": "No workouts | 1 workout logged | {n} workouts logged",
+      "register": "Log",
+      "registerTitle": "Log workout",
+      "sets": "Sets",
+      "addSet": "Add set",
+      "removeSet": "Remove set {n}",
+      "seconds": "Seconds",
+      "effort": "Perceived effort (1–10)",
+      "effortHelp": "1 = very easy, 10 = maximum effort.",
+      "notes": "Notes",
+      "createdTitle": "Workout logged",
+      "createdDescription": "You can see it in your history.",
+      "errorTitle": "Could not log the workout",
+      "minutes": "{n} min",
+      "effortValue": "Effort {n}/10",
+      "allDisciplines": "All",
+      "filterDiscipline": "Discipline",
+      "dateFrom": "From",
+      "dateTo": "To",
+      "clearFilters": "Clear filters",
+      "loadError": "Could not load your history",
+      "empty": "No workouts logged yet",
+      "emptyFiltered": "No workouts match these filters",
+      "emptyDescription": "Pick an exercise and press “Log” when you finish.",
+      "validation": {
+        "effort": "Must be between 1 and 10",
+        "reps": "Invalid reps",
+        "duration": "Invalid time",
+        "weight": "Invalid weight",
+        "repsOrDuration": "Enter reps or time",
+        "minSets": "Add at least one set"
+      }
+    },
+    "photos": {
+      "formTitle": "Upload progress photo",
+      "formDescription": "Only you can see them. They are stored in Firebase Storage.",
+      "dropLabel": "Drag an image or click to choose one",
+      "dropDescription": "JPG, PNG or WebP, up to {mb} MB",
+      "takenAt": "Photo date",
+      "note": "Note",
+      "upload": "Upload photo",
+      "galleryTitle": "My photos",
+      "loadError": "Could not load your photos",
+      "empty": "No progress photos yet",
+      "emptyDescription": "Upload a photo every so often to compare your progress.",
+      "open": "View photo from {date}",
+      "uploadedTitle": "Photo uploaded",
+      "uploadedDescription": "It was added to your progress gallery.",
+      "uploadErrorTitle": "Could not upload the photo",
+      "deletedTitle": "Photo deleted",
+      "deletedDescription": "It was removed from your gallery.",
+      "deleteErrorTitle": "Could not delete the photo"
+    }
+  },
+  "health": {
+    "nav": "Medical conditions",
+    "categories": {
+      "injury": "Injuries",
+      "medical": "Medical conditions",
+      "disability": "Disabilities"
+    },
+    "severities": {
+      "mild": "Mild",
+      "moderate": "Moderate",
+      "severe": "Severe"
+    },
+    "validation": {
+      "condition": "Select a condition",
+      "futureDate": "The date cannot be in the future"
+    },
+    "form": {
+      "title": "Add condition",
+      "description": "We exclude or adapt exercises that could affect you.",
+      "condition": "Condition",
+      "conditionPlaceholder": "Select a condition",
+      "severity": "Severity",
+      "severityHelp": "Severe fully excludes exercises that would otherwise only be limited.",
+      "startedAt": "Since when",
+      "affectedZones": "Zones to exclude",
+      "affectedZonesHelp": "Muscle zones you do not want to train while you have this condition.",
+      "notes": "Notes",
+      "submit": "Add"
+    },
+    "myConditions": {
+      "title": "My conditions",
+      "loadError": "Could not load your conditions",
+      "empty": "No conditions registered",
+      "emptyDescription": "If you have an injury or condition, add it to adapt your exercises.",
+      "since": "Since {date}",
+      "delete": "Delete {name}",
+      "confirmTitle": "Delete condition?",
+      "confirmDescription": "“{name}” will no longer limit your exercises.",
+      "createdTitle": "Condition added",
+      "createdDescription": "Your exercises were adjusted to this condition.",
+      "createErrorTitle": "Could not add the condition",
+      "deletedTitle": "Condition deleted",
+      "deletedDescription": "Your exercises were updated.",
+      "deleteErrorTitle": "Could not delete the condition"
+    }
+  },
+  "files": {
+    "errors": {
+      "type": "Only JPG, PNG or WebP images are allowed.",
+      "size": "The image is larger than {mb} MB."
+    }
   }
 }

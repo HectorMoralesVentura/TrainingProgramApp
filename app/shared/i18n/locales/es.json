@@ -4,7 +4,16 @@
   },
   "common": {
     "logout": "Cerrar sesión",
-    "changeLanguage": "Cambiar idioma"
+    "changeLanguage": "Cambiar idioma",
+    "close": "Cerrar",
+    "optional": "Opcional",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "search": "Buscar...",
+    "mainNav": "Navegación principal",
+    "userMenu": "Menú de usuario",
+    "changeLanguageTo": "Cambiar a {language}"
   },
   "auth": {
     "login": {
@@ -18,16 +27,274 @@
       "usernamePlaceholder": "Escribe tu usuario",
       "passwordPlaceholder": "Escribe tu contraseña",
       "showPassword": "Mostrar contraseña",
-      "hidePassword": "Ocultar contraseña"
+      "hidePassword": "Ocultar contraseña",
+      "or": "o",
+      "google": "Continuar con Google"
     },
     "validation": {
       "username": "Usuario requerido",
       "password": "Contraseña requerida"
+    },
+    "google": {
+      "errors": {
+        "popupBlocked": "El navegador bloqueó la ventana de Google. Permite las ventanas emergentes e intenta de nuevo.",
+        "network": "No hay conexión con Google. Revisa tu internet.",
+        "accountExists": "Ya existe una cuenta con este correo usando otro método de acceso.",
+        "unauthorizedDomain": "Este dominio no está autorizado en Firebase (Authentication > Configuración > Dominios autorizados).",
+        "notEnabled": "El acceso con Google no está habilitado en Firebase.",
+        "generic": "No se pudo iniciar sesión con Google. Intenta de nuevo."
+      }
     }
   },
   "home": {
     "title": "Inicio",
     "subtitle": "Esta es tu página principal de Training Program",
     "welcome": "¡Bienvenido, {username}!"
+  },
+  "training": {
+    "nav": "Entrenar",
+    "back": "Volver",
+    "stepOf": "Paso {current} de {total}",
+    "loadError": "No se pudo cargar la información",
+    "home": {
+      "cta": "Empezar a entrenar"
+    },
+    "steps": {
+      "discipline": "Deporte",
+      "zone": "Zona muscular",
+      "exercises": "Ejercicios"
+    },
+    "discipline": {
+      "title": "¿Qué quieres entrenar hoy?",
+      "subtitle": "Elige una disciplina para empezar.",
+      "zones": "Sin zonas | 1 zona | {n} zonas"
+    },
+    "zone": {
+      "title": "Elige la zona muscular",
+      "subtitle": "{discipline}: selecciona qué parte del cuerpo quieres trabajar.",
+      "exercises": "Sin ejercicios | 1 ejercicio | {n} ejercicios"
+    },
+    "exercises": {
+      "subtitle": "Sin ejercicios sugeridos | Te sugerimos 1 ejercicio para tu nivel. | Te sugerimos {n} ejercicios para tu nivel.",
+      "subtitleLoading": "Preparando tus ejercicios..."
+    },
+    "level": {
+      "label": "Tu nivel"
+    },
+    "levels": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "master": "Master",
+      "legend": "Leyenda"
+    },
+    "exercise": {
+      "bodyweight": "Peso corporal",
+      "sets": "Series",
+      "reps": "Reps",
+      "hold": "Sostener",
+      "rest": "Descanso",
+      "suggestedWeight": "Peso sugerido",
+      "suggestedWeightHint": "Registra tu peso corporal para calcular el peso sugerido.",
+      "viewDetail": "Ver detalle",
+      "muscles": "Músculos trabajados",
+      "byLevel": "Series y repeticiones por nivel",
+      "toFailureShort": "Fallo",
+      "toFailureHint": "“Fallo” significa repetir hasta no poder completar otra repetición con buena técnica.",
+      "weight": "Peso",
+      "registerWeight": "Registra tu peso",
+      "instructions": "Instrucciones"
+    },
+    "media": {
+      "thumbnail": "Portada",
+      "gif": "Ejecución",
+      "video": "Video",
+      "illustration": "Músculos",
+      "pending": "Contenido visual próximamente",
+      "watchVideo": "Ver video"
+    },
+    "empty": {
+      "zones": "Esta disciplina aún no tiene zonas",
+      "exercises": "Esta zona aún no tiene ejercicios"
+    },
+    "notFound": {
+      "discipline": "No encontramos esta disciplina",
+      "zone": "No encontramos esta zona muscular"
+    },
+    "restriction": {
+      "title": "Precaución por tu condición",
+      "limitedTo": "Limitado a {level}",
+      "maxLevel": "Nivel máximo por tu condición: {level}"
+    }
+  },
+  "profile": {
+    "nav": "Mi perfil",
+    "title": "Mi perfil",
+    "subtitle": "Tus medidas y condiciones ajustan los ejercicios y el peso sugerido.",
+    "tabs": {
+      "measurements": "Medidas",
+      "health": "Salud",
+      "photos": "Fotos"
+    },
+    "photo": {
+      "change": "Cambiar foto",
+      "remove": "Quitar foto",
+      "uploadedTitle": "Foto actualizada",
+      "uploadedDescription": "Tu nueva foto de perfil ya está visible.",
+      "uploadErrorTitle": "No se pudo subir la foto",
+      "deletedTitle": "Foto eliminada",
+      "deletedDescription": "Se quitó tu foto de perfil.",
+      "deleteErrorTitle": "No se pudo quitar la foto"
+    }
+  },
+  "progress": {
+    "levels": {
+      "savedTitle": "Nivel actualizado",
+      "savedDescription": "Recalculamos tus ejercicios y el peso sugerido.",
+      "errorTitle": "No se pudo actualizar tu nivel"
+    },
+    "measurements": {
+      "createdTitle": "Medida registrada",
+      "updatedTitle": "Medida actualizada",
+      "savedDescription": "Tu peso sugerido se recalculó con esta medida.",
+      "errorTitle": "No se pudo guardar la medida",
+      "weight": "Peso",
+      "date": "Fecha",
+      "dateHelp": "Una medida por día: si ya existe, se actualiza.",
+      "height": "Altura",
+      "bodyFat": "Grasa corporal (%)",
+      "bodyMeasures": "Perímetros corporales",
+      "notes": "Notas",
+      "fields": {
+        "chest_cm": "Pecho",
+        "waist_cm": "Cintura",
+        "hip_cm": "Cadera",
+        "arm_cm": "Brazo",
+        "thigh_cm": "Muslo"
+      },
+      "lastUpdate": "Última medida",
+      "loadError": "No se pudo cargar tu historial de medidas",
+      "empty": "Aún no tienes medidas",
+      "emptyDescription": "Registra tu peso para que calculemos el peso sugerido de cada ejercicio.",
+      "formTitle": "Registrar medida",
+      "formDescription": "Solo el peso es obligatorio.",
+      "historyTitle": "Historial",
+      "validation": {
+        "positive": "Debe ser mayor a 0",
+        "weightRequired": "El peso es obligatorio",
+        "weightRange": "El peso debe estar entre 20 y 400 kg",
+        "date": "Fecha inválida",
+        "futureDate": "La fecha no puede ser futura",
+        "bodyFat": "Debe estar entre 1 y 75 %"
+      }
+    },
+    "workouts": {
+      "nav": "Historial",
+      "title": "Mis entrenamientos",
+      "subtitle": "Todo lo que has registrado.",
+      "count": "Sin entrenamientos | 1 entrenamiento registrado | {n} entrenamientos registrados",
+      "register": "Registrar",
+      "registerTitle": "Registrar entrenamiento",
+      "sets": "Series",
+      "addSet": "Agregar serie",
+      "removeSet": "Quitar serie {n}",
+      "seconds": "Segundos",
+      "effort": "Esfuerzo percibido (1–10)",
+      "effortHelp": "1 = muy fácil, 10 = esfuerzo máximo.",
+      "notes": "Notas",
+      "createdTitle": "Entrenamiento registrado",
+      "createdDescription": "Lo puedes ver en tu historial.",
+      "errorTitle": "No se pudo registrar el entrenamiento",
+      "minutes": "{n} min",
+      "effortValue": "Esfuerzo {n}/10",
+      "allDisciplines": "Todas",
+      "filterDiscipline": "Disciplina",
+      "dateFrom": "Desde",
+      "dateTo": "Hasta",
+      "clearFilters": "Limpiar filtros",
+      "loadError": "No se pudo cargar tu historial",
+      "empty": "Aún no registras entrenamientos",
+      "emptyFiltered": "No hay entrenamientos con estos filtros",
+      "emptyDescription": "Elige un ejercicio y presiona “Registrar” al terminar.",
+      "validation": {
+        "effort": "Debe estar entre 1 y 10",
+        "reps": "Repeticiones inválidas",
+        "duration": "Tiempo inválido",
+        "weight": "Peso inválido",
+        "repsOrDuration": "Indica repeticiones o tiempo",
+        "minSets": "Agrega al menos una serie"
+      }
+    },
+    "photos": {
+      "formTitle": "Subir foto de progreso",
+      "formDescription": "Solo tú puedes verlas. Se guardan en Firebase Storage.",
+      "dropLabel": "Arrastra una imagen o haz clic para elegirla",
+      "dropDescription": "JPG, PNG o WebP, máximo {mb} MB",
+      "takenAt": "Fecha de la foto",
+      "note": "Nota",
+      "upload": "Subir foto",
+      "galleryTitle": "Mis fotos",
+      "loadError": "No se pudieron cargar tus fotos",
+      "empty": "Aún no tienes fotos de progreso",
+      "emptyDescription": "Sube una foto cada cierto tiempo para comparar tu avance.",
+      "open": "Ver foto del {date}",
+      "uploadedTitle": "Foto subida",
+      "uploadedDescription": "Se agregó a tu galería de progreso.",
+      "uploadErrorTitle": "No se pudo subir la foto",
+      "deletedTitle": "Foto eliminada",
+      "deletedDescription": "Se quitó de tu galería.",
+      "deleteErrorTitle": "No se pudo eliminar la foto"
+    }
+  },
+  "health": {
+    "nav": "Condiciones médicas",
+    "categories": {
+      "injury": "Lesiones",
+      "medical": "Condiciones médicas",
+      "disability": "Discapacidades"
+    },
+    "severities": {
+      "mild": "Leve",
+      "moderate": "Moderada",
+      "severe": "Severa"
+    },
+    "validation": {
+      "condition": "Selecciona una condición",
+      "futureDate": "La fecha no puede ser futura"
+    },
+    "form": {
+      "title": "Agregar condición",
+      "description": "Excluimos o adaptamos los ejercicios que puedan afectarte.",
+      "condition": "Condición",
+      "conditionPlaceholder": "Selecciona una condición",
+      "severity": "Severidad",
+      "severityHelp": "Severa excluye por completo los ejercicios que normalmente solo se limitarían.",
+      "startedAt": "Desde cuándo",
+      "affectedZones": "Zonas a excluir",
+      "affectedZonesHelp": "Zonas musculares que no quieres entrenar mientras tengas esta condición.",
+      "notes": "Notas",
+      "submit": "Agregar"
+    },
+    "myConditions": {
+      "title": "Mis condiciones",
+      "loadError": "No se pudieron cargar tus condiciones",
+      "empty": "No has registrado condiciones",
+      "emptyDescription": "Si tienes alguna lesión o condición, agrégala para adaptar tus ejercicios.",
+      "since": "Desde {date}",
+      "delete": "Eliminar {name}",
+      "confirmTitle": "¿Eliminar condición?",
+      "confirmDescription": "“{name}” dejará de limitar tus ejercicios.",
+      "createdTitle": "Condición agregada",
+      "createdDescription": "Tus ejercicios se ajustaron a esta condición.",
+      "createErrorTitle": "No se pudo agregar la condición",
+      "deletedTitle": "Condición eliminada",
+      "deletedDescription": "Tus ejercicios se actualizaron.",
+      "deleteErrorTitle": "No se pudo eliminar la condición"
+    }
+  },
+  "files": {
+    "errors": {
+      "type": "Solo se permiten imágenes JPG, PNG o WebP.",
+      "size": "La imagen supera {mb} MB."
+    }
   }
 }

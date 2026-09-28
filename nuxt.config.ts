@@ -42,6 +42,15 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxtjs/i18n", "@vueuse/nuxt"],
   css: ["~/assets/css/main.css"],
 
+  // SVG en línea: en modo CSS los íconos que cambian de estado (p. ej. el selector de nivel)
+  // se dibujaban con el ícono equivocado. scan incluye en el bundle los íconos usados en el código.
+  icon: {
+    mode: "svg",
+    clientBundle: {
+      scan: true,
+    },
+  },
+
   app: {
     head: {
       titleTemplate: "Training Program - %s",
@@ -65,6 +74,16 @@ export default defineNuxtConfig({
       apiAuthPath: process.env.NUXT_PUBLIC_API_AUTH_PATH ?? "/api/auth/login/",
       apiAuthLogoutPath:
         process.env.NUXT_PUBLIC_API_AUTH_LOGOUT_PATH ?? "/api/auth/logout/",
+      apiFirebaseAuthPath:
+        process.env.NUXT_PUBLIC_API_FIREBASE_AUTH_PATH ?? "/api/auth/firebase/",
+      // Config web de Firebase: son valores públicos (van al navegador).
+      // La llave privada (serviceAccountKey.json) vive solo en el backend.
+      firebase: {
+        apiKey: process.env.NUXT_PUBLIC_FIREBASE_API_KEY ?? "",
+        authDomain: process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN ?? "",
+        projectId: process.env.NUXT_PUBLIC_FIREBASE_PROJECT_ID ?? "",
+        appId: process.env.NUXT_PUBLIC_FIREBASE_APP_ID ?? "",
+      },
     },
   },
 

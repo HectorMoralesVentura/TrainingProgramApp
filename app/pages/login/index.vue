@@ -7,7 +7,7 @@ type LoginForm = { username: string, password: string }
 type FieldName = keyof LoginForm
 
 const { t } = useI18n()
-const { login, isLoggedIn } = useAuth()
+const { login, loginWithFirebase, isLoggedIn } = useAuth()
 const route = useRoute()
 
 if (isLoggedIn.value) {
@@ -106,13 +106,38 @@ function labelUi(name: FieldName) {
   }
 }
 
-const { mutateAsync, isError, isPending, error } = useMutation<unknown, unknown, LoginForm>({
+const { mutateAsync, isPending, error, reset: resetPasswordLogin } = useMutation<unknown, unknown, LoginForm>({
   mutationFn: variables => login(variables.username, variables.password),
 })
 
-const loginErrorMessage = computed(() =>
-  error.value != null ? parseFetchError(error.value) : '',
-)
+// Google: popup de Firebase -> ID token -> el backend lo verifica y devuelve el token de Django.
+const { isEnabled: googleEnabled, signInWithGoogle } = useFirebase()
+const googleLogin = useMutation({
+  mutationFn: async () => {
+    const idToken = await signInWithGoogle()
+    await loginWithFirebase(idToken)
+  },
+})
+
+const loginErrorMessage = computed(() => {
+  if (error.value != null) return parseFetchError(error.value)
+  const googleError = googleLogin.error.value
+  if (googleError == null) return ''
+  if (isFirebaseError(googleError)) {
+    const key = firebaseAuthErrorKey(googleError.code)
+    return key ? t(key) : ''
+  }
+  return parseFetchError(googleError)
+})
+
+async function onGoogleLogin() {
+  resetPasswordLogin()
+  await googleLogin.mutateAsync().catch(() => undefined)
+  if (isLoggedIn.value) {
+    const redirect = (route.query.redirect as string) || '/'
+    await navigateTo(redirect)
+  }
+}
 
 function onValidationError() {
   for (const { name } of fields.value) {
@@ -122,6 +147,7 @@ function onValidationError() {
 }
 
 async function onSubmit(event: FormSubmitEvent<LoginForm>) {
+  googleLogin.reset()
   await mutateAsync(event.data)
   const redirect = (route.query.redirect as string) || '/'
   await navigateTo(redirect)
@@ -213,7 +239,7 @@ useSeoMeta({
             </UFormField>
 
             <UAlert
-              v-if="isError && loginErrorMessage"
+              v-if="loginErrorMessage"
               color="error"
               variant="subtle"
               icon="i-lucide-circle-alert"
@@ -226,9 +252,26 @@ useSeoMeta({
               size="lg"
               block
               :loading="isPending"
+              :disabled="googleLogin.isPending.value"
               :label="t('auth.login.submit')"
             />
           </UForm>
+
+          <!-- Solo aparece si la config web de Firebase está en el .env -->
+          <template v-if="googleEnabled">
+            <USeparator :label="t('auth.login.or')" />
+            <UButton
+              color="neutral"
+              variant="outline"
+              size="lg"
+              block
+              icon="i-simple-icons-google"
+              :loading="googleLogin.isPending.value"
+              :disabled="isPending"
+              :label="t('auth.login.google')"
+              @click="onGoogleLogin"
+            />
+          </template>
         </div>
       </div>
     </section>

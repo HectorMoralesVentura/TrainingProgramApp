@@ -15,4 +15,9 @@ export default defineNuxtPlugin((nuxtApp) => {
   })
 
   nuxtApp.vueApp.use(VueQueryPlugin, { queryClient })
+
+  // Expuesto como $queryClient para limpiarlo al cerrar sesión (fuera de componentes).
+  return {
+    provide: { queryClient },
+  }
 })
